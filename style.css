@@ -50,6 +50,10 @@ body {
   color: var(--text-color) !important;
 }
 
+.navbar .nav-link:hover {
+  opacity: 0.7;
+}
+
 .navbar-toggler {
   border: none;
   background: transparent;
@@ -95,7 +99,13 @@ body {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
 }
 
 .section-title {
@@ -127,8 +137,8 @@ body {
 
 .timeline-dot {
   position: absolute;
-  left: -7px;
-  top: 5px;
+  left: -6.5px;
+  top: 0px;
   width: 14px;
   height: 14px;
   background: var(--timeline-dot);
@@ -270,7 +280,6 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  pointer-events: auto;
 }
 
 .theme-floating-btn:hover {
@@ -281,10 +290,43 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(40px);
+  will-change: transform, opacity;
 }
 
 .reveal.reveal-active {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Company Header */
+
+.company-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.company-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+.company-info h5 {
+  margin-bottom: 2px;
+}
+
+.company-info span {
+  display: block;
+}
+
+.company-info ul {
+  padding-inline-start: 20px;
 }
