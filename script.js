@@ -129,4 +129,13 @@ document.addEventListener("DOMContentLoaded", function () {
   revealElements.forEach((el) => {
     observer.observe(el);
   });
+
+  /* =========================
+    COPYRIGHT YEAR
+  ========================== */
+  const copyrightYear = document.getElementById("copyrightYear");
+
+  if (copyrightYear) {
+    copyrightYear.textContent = new Date().getFullYear();
+  }
 });
